@@ -16,17 +16,26 @@
         <!-- Control absoluto de Vue en este div -->
         <div id="myApp">
             <!-- vue -->
-            <img :src="img" :alt="name" />
+            <img v-on:mouseover="toggleShowPrices" :src="img" :alt="name" />
             <h4>
                 {{ name }}
                 <span v-if="changePercent > 0">👍</span>
                 <span v-else-if="changePercent < 0">👎</span>
                 <span v-else>🤞</span>
-
-                <ul>
-                    <li v-for="(p,i) in prices" :key="p">{{ i+1 }}-{{ p }}</li>
-                </ul>
+                <span v-on:click="toggleShowPrices">
+                    {{ showPrices ? '🐵':'🙈'}}</span>
             </h4>
+            <!-- <ul>
+                    <li v-for="(p,i) in prices" :key="p">{{ i+1 }}-{{ p }}</li>
+                </ul> -->
+
+
+
+            <ol v-show="showPrices">
+                <li v-for="(p,i) in pricesWithDays" :key="p.day">{{ p.day }} ({{ p.value }})</li>
+            </ol>
+
+
 
             <!-- vue -->
             <header>
