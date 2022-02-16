@@ -16,8 +16,8 @@
         <!-- Control absoluto de Vue en este div -->
         <div id="myApp">
             <!-- vue -->
-            <img v-on:mouseover="toggleShowPrices" :src="img" :alt="name" />
-            <h4>
+            <img v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices" :src="img" :alt="name" />
+            <h4 :class="changePercent > 0 ? 'green' : 'red'">
                 {{ name }}
                 <span v-if="changePercent > 0">👍</span>
                 <span v-else-if="changePercent < 0">👎</span>
@@ -31,8 +31,8 @@
 
 
 
-            <ol v-show="showPrices">
-                <li v-for="(p,i) in pricesWithDays" :key="p.day">{{ p.day }} ({{ p.value }})</li>
+            <ol v-show="showPrices" :style="{ background: '#' + color }">
+                <li :class="{ orange: p.value == price, red: p.value < price, green: p.value > price}" v-for="(p,i) in pricesWithDays" :key="p.day">{{ p.day }} ({{ p.value }})</li>
             </ol>
 
 
