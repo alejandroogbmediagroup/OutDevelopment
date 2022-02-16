@@ -3,6 +3,7 @@ const app = Vue.createApp({
     //     <h1>Hola Mundo</h1>
     //     <p>Desde app.js</p>
     // `
+
     data() {
         return {
             quote: "Im Batman",
