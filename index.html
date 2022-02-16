@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="https://unpkg.com/vue@3"></script>
 
-
     <title>Training 1</title>
 </head>
 
@@ -16,38 +15,46 @@
     <main>
         <!-- Control absoluto de Vue en este div -->
         <div id="myApp">
+            <!-- vue -->
+            <img :src="img" :alt="name" />
+            <h4>
+                {{ name }}
+                <span v-if="changePercent > 0">👍</span>
+                <span v-else-if="changePercent < 0">👎</span>
+                <span v-else>🤞</span>
 
-            <h1>{{quote}}</h1>
-            <p>{{ message }}</p>
-            <blockquote> - {{ author }}</blockquote>
-        </div>
+                <ul>
+                    <li v-for="(p,i) in prices" :key="p">{{ i+1 }}-{{ p }}</li>
+                </ul>
+            </h4>
 
-        <header>
-            <h1>This is a title</h1>
-            <h3>this is a subtitle, you can change</h3>
-        </header>
-        <p id="principal">Things I want learn:</p>
-        <ul>
-            <li>HTML.</li>
-            <li>CSS.</li>
-            <li>JavaScript.</li>
-            <li>Vue.</li>
-        </ul>
-        <p class="destacado">how to create a html document:</p>
-        <ol>
-            <li>Start with Visual Studio Code</li>
-            <li>Create a new document.</li>
-            <li>Save as html</li>
-        </ol>
+            <!-- vue -->
+            <header>
+                <h1>This is a title</h1>
+                <h3>this is a subtitle, you can change</h3>
+            </header>
+            <p id="principal">Things I want learn:</p>
+            <ul>
+                <li>HTML.</li>
+                <li>CSS.</li>
+                <li>JavaScript.</li>
+                <li>Vue.</li>
+            </ul>
+            <p class="destacado">how to create a html document:</p>
+            <ol>
+                <li>Start with Visual Studio Code</li>
+                <li>Create a new document.</li>
+                <li>Save as html</li>
+            </ol>
 
-        <a href="https://stackoverflow.com/" target="_blank">Realiza una pregunta</a
-      >
+            <a href="https://stackoverflow.com/" target="_blank">Realiza una pregunta</a
+        >
+      </div>
     </main>
     <footer>
       <a href="secciones/galeria/galeria.html">Galeria</a>
-        </footer>
-        <script src="app.js"></script>
-
+            </footer>
+            <script src="app.js"></script>
 </body>
 
 </html>

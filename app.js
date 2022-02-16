@@ -6,9 +6,10 @@ const app = Vue.createApp({
 
     data() {
         return {
-            quote: "Im Batman",
-            message: 'Dataaaa!!!!',
-            author: 'D10'
+            name: 'Bitcoin',
+            img: 'src/img/bitcoin-btc-logo.png',
+            changePercent: 0,
+            prices: [8400, 7900, 8200, 9000, 10000, 10200, 7500],
         }
     },
 })
