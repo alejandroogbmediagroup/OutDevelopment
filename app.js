@@ -6,7 +6,9 @@ const app = Vue.createApp({
 
     data() {
         return {
+            value: 0,
             name: 'Bitcoin',
+            symbol: 'BTC',
             img: 'src/img/bitcoin-btc-logo.png',
             changePercent: 10,
             price: 8400,
@@ -19,6 +21,26 @@ const app = Vue.createApp({
 
         }
     },
+
+    computed: {
+        title() {
+            return `${this.name} - ${this.symbol}`
+        },
+        convertedValue() {
+            if (!this.value) {
+                return 0
+            }
+
+            return this.value / this.price
+        }
+    },
+
+    watch: {
+        showPrices(newValue, oldValue) {
+            console.log(newValue, oldValue)
+        }
+    },
+
     methods: {
         toggleShowPrices() {
             this.showPrices = !this.showPrices

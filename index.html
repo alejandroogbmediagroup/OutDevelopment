@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="https://unpkg.com/vue@3"></script>
 
-    <title>Training 1</title>
+    <title>Vue,HTML5,JS,CSS🤯</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <!-- vue -->
             <img v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices" :src="img" :alt="name" />
             <h4 :class="changePercent > 0 ? 'green' : 'red'">
-                {{ name }}
+                {{ title }}
                 <span v-if="changePercent > 0">👍</span>
                 <span v-else-if="changePercent < 0">👎</span>
                 <span v-else>🤞</span>
@@ -29,7 +29,9 @@
                     <li v-for="(p,i) in prices" :key="p">{{ i+1 }}-{{ p }}</li>
                 </ul> -->
 
-
+            <input type="number" v-model="value">
+            <br>
+            <span>{{ convertedValue }}</span>
 
             <ol v-show="showPrices" :style="{ background: '#' + color }">
                 <li :class="{ orange: p.value == price, red: p.value < price, green: p.value > price}" v-for="(p,i) in pricesWithDays" :key="p.day">{{ p.day }} ({{ p.value }})</li>
