@@ -87,3 +87,34 @@ main {
 .novedad {
     font-weight: bold;
 }
+
+footer nav.css {
+    text-decoration: underline wavy;
+}
+
+#message p.once.final {
+    font-weight: bold;
+    color: #56329a;
+    font-size: 22px;
+    font-family: Georgia;
+}
+
+a:not(.destacado) {
+    background-color: #ff80ff
+}
+
+h1::first-letter {
+    color: red
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+li::before {
+    content: "🍕";
+}
+
+h1::after {
+    content: "🥥";
+}

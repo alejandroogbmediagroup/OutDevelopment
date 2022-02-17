@@ -29,16 +29,19 @@
                     <li v-for="(p,i) in prices" :key="p">{{ i+1 }}-{{ p }}</li>
                 </ul> -->
 
-            <input type="number" v-model="value">
-            <br>
+            <input type="number" v-model="value" />
+            <br />
             <span>{{ convertedValue }}</span>
 
             <ol v-show="showPrices" :style="{ background: '#' + color }">
-                <li :class="{ orange: p.value == price, red: p.value < price, green: p.value > price}" v-for="(p,i) in pricesWithDays" :key="p.day">{{ p.day }} ({{ p.value }})</li>
+                <li :class="{ orange: p.value == price, red: p.value < price, green: p.value > price}" v-for="(p,i) in pricesWithDays" :key="p.day">
+                    {{ p.day }} ({{ p.value }})
+                </li>
             </ol>
 
-
-
+            <span id="message">
+                <p class="once final">Porque Shi</p>
+            </span>
             <!-- vue -->
             <header>
                 <h1>This is a title😍</h1>
@@ -58,14 +61,22 @@
                 <li class="novedad">Save as html</li>
             </ol>
 
-            <a href="https://stackoverflow.com/" target="_blank">Realiza una pregunta</a
-        >
-      </div>
+            <a href="#" class="destacado">1</a><a href="#" class="destacado">2</a><a href="#">3</a>
+            <hr>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> veritatis itaque illo ut labore, quasi omnis asperiores sint, perferendis <br>nobis incidunt ea voluptatibus commodi ab in cum veniam maxime optio.</p>
+
+            <a href="https://stackoverflow.com/" target="_blank">Realiza una pregunta</a>
+
     </main>
+    <!-- <footer>
+        <a href="secciones/galeria/galeria.html">Galeria</a>
+    </footer> -->
     <footer>
-      <a href="secciones/galeria/galeria.html">Galeria</a>
-            </footer>
-            <script src="app.js"></script>
+        <nav class="css"><a href="#">Css</a></nav>
+    </footer>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
