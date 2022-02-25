@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue School</title>
+</head>
+
+<body>
+    <div id="jogobonito">
+        <h1>{{ header }}</h1>
+        <input v-model="header">
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const jogobonito = Vue.createApp({
+                data() {
+                    return {
+                        header: "JogoBonito and Web Develop magic Combination."
+                    }
+                }
+            })
+            .mount('#jogobonito')
+    </script>
+</body>
+
+</html>
